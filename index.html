@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Calculator</h1>
+        <p>using HTML, CSS & JS</p>
+    </header>
+
+    <div class="calculator">
+        <div id="current-calculation-display"></div>
+        <div id="result-display">0</div>
+        <table>
+            <tr>
+                <td class="symbols" onclick="clearAll()">AC</td>
+                <td class="symbols" onclick="deleteLast()">DE</td>
+                <td class="symbols" onclick="percentCalc()">%</td>
+                <td class="symbols" onclick="appendValue(' / ')">/</td>
+            </tr>
+            <tr>
+                <td onclick="appendValue(7)">7</td>
+                <td onclick="appendValue(8)">8</td>
+                <td onclick="appendValue(9)">9</td>
+                <td class="symbols" onclick="appendValue(' * ')">x</td>
+            </tr>
+            <tr>
+                <td onclick="appendValue(4)">4</td>
+                <td onclick="appendValue(5)">5</td>
+                <td onclick="appendValue(6)">6</td>
+                <td class="symbols" onclick="appendValue(' - ')">-</td>
+            </tr>
+            <tr>
+                <td onclick="appendValue(1)">1</td>
+                <td onclick="appendValue(2)">2</td>
+                <td onclick="appendValue(3)">3</td>
+                <td class="symbols" onclick="appendValue(' + ')">+</td>
+            </tr>
+            <tr>
+                <td class="symbols" onclick="appendValue('.')">.</td>
+                <td onclick="appendValue(0)">0</td>
+                <td id="result-btn" class="symbols" colspan="2" onclick="calculate()">=</td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
